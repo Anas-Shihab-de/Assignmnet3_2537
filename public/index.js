@@ -1,4 +1,3 @@
-
 const API_URL = "https://pokeapi.co/api/v2/pokemon?limit=1500"
 
 let firstCard = null
