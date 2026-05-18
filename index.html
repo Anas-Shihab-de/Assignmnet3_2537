@@ -3,42 +3,58 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Pokemon Memory Game</title>
+
   <link rel="stylesheet" href="style.css">
-  <!-- import jQuery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="index.js"></script>
+
+  <!--use Jquery to give site nicer style-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <script defer src="index.js"></script>
 </head>
 
-<body>
-  <div id="game_grid">
-    <div class="card">
-      <img id="img1" class="front_face" src="001.png" alt="">
-      <img class="back_face" src="back.webp" alt="">
-    </div>
-    <div class="card">
-      <img id="img2" class="front_face" src="002.png" alt="">
-      <img class="back_face" src="back.webp" alt="">
-    </div>
-    <div class="card">
-      <img id="img3" class="front_face" src="003.png" alt="">
-      <img class="back_face" src="back.webp" alt="">
-    </div>
-    <div class="card">
-      <img id="img4" class="front_face" src="001.png" alt="">
-      <img class="back_face" src="back.webp" alt="">
-    </div>
-    <div class="card">
-      <img id="img5" class="front_face" src="002.png" alt="">
-      <img class="back_face" src="back.webp" alt="">
-    </div>
-    <div class="card">
-      <img id="img6" class="front_face" src="003.png" alt="">
-      <img class="back_face" src="back.webp" alt="">
-    </div>
+<body class="theme-classic">
+
+<header>
+
+  <h1>pokemon game</h1>
+
+  <div class="status-bar">
+    <div>Clicks: <span id="clicks">0</span></div>
+    <div>Pairs Left: <span id="pairsLeft">0</span></div>
+    <div>Pairs Matched: <span id="pairsMatched">0</span></div>
+    <div>Total Pairs: <span id="totalPairs">0</span></div>
+    <div>Time: <span id="timer">0</span>s</div>
   </div>
+
+  <div class="controls">
+
+    <button id="startBtn">Start Game</button>
+    <button id="resetBtn">Reset</button>
+
+    <select id="difficulty">
+      <option value="easy">Easy</option>
+      <option value="medium">Medium</option>
+      <option value="hard">Hard</option>
+    </select>
+
+    <select id="theme">
+      <option value="classic">Classic</option>
+      <option value="dark">Dark</option>
+      <option value="fire">Fire</option>
+    </select>
+
+    <button id="revealBtn">Reveal Cards</button>
+
+  </div>
+
+</header>
+
+<div id="message"></div>
+
+<div id="game_grid"></div>
+
 </body>
 
 </html>
